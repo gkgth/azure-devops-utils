@@ -209,6 +209,8 @@ throw_if_empty --docker_repository $docker_repository
 throw_if_empty --pipeline_port $pipeline_port
 throw_if_empty --jenkins_fqdn $jenkins_fqdn
 
+export DEBIAN_FRONTEND=noninteractive
+
 add_empty_image_to_acr
 
 install_kubectl
